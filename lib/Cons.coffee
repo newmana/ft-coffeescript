@@ -1,18 +1,28 @@
 exports.Nil = class Nil
-  head: ->
-    return null
+    head: ->
+        return null
 
-  tail: ->
-    return null
+    tail: ->
+        return null
 
-exports.Cons = class Cons extends exports.Nil
-  constructor: (@head, @restArray) ->
+exports.Cons = class Cons extends Nil
+    constructor: (@head, @restArray) ->
+        @head ?= null
+        @restArray ?= null
 
-  head: ->
-    @head
+    head: ->
+        @head
 
-  tail: ->
-    @restArray
+    tail: ->
+        @restArray
 
-  cons: (element) ->
-    new Cons(element, this)
+    cons: (element) ->
+        new Cons(element, this)
+
+    snoc: (element) ->
+        list = this
+        while (list?.restArray?)
+            list = list.restArray
+        if !list.head? then list.head = element else list.restArray = new Cons(element)
+        return this
+

@@ -1,11 +1,4 @@
-exports.Nil = class Nil
-    head: ->
-        return null
-
-    tail: ->
-        return null
-
-exports.Cons = class Cons extends Nil
+exports.Cons = class Cons
     constructor: (@head, @restArray) ->
         @head ?= null
         @restArray ?= null

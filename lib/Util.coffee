@@ -11,11 +11,10 @@ exports.cube = (x) ->
 
 exports.sineCube = exports.compose(exports.sine, exports.cube)
 
-exports.map = (f, cons) ->
+exports.map = (f, list) ->
     result = new cons.Cons()
-    while (cons.head?)
-      newValue = f(cons.head)
-      #result = result.cons(newValue)
-      cons = cons.tail()
+    while (list.head?)
+      newValue = f(list.head)
+      result = result.cons(newValue)
+      list = list.tail()
     return result
-

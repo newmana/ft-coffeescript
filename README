@@ -2,3 +2,10 @@ CoffeeScript Implementation of Finger Tree
 
 See:
 http://en.wikipedia.org/wiki/Finger_tree
+
+Tests
+npm install jasmine-node
+jasmine-node --coffee spec
+
+Install CoffeeScript
+

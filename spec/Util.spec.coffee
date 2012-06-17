@@ -10,21 +10,7 @@ sine = (x) ->
 cube = (x) ->
     return x * x * x
 
-#b = new cons.Cons("a", null)
-#b = b.cons("b").cons("c")
-#console.log(b)
-#console.log(b.head)
-#b = b.tail()
-#console.log(b)
-#b = b.tail()
-#console.log(b)
-#b = new cons.Cons("a")
-#b = b.cons("b").cons("c")
-#console.log(b)
-#b.snoc("x")
-#console.log(b)
-#console.log(b.tail())
-#console.log(b.head?)
+
 #c = new prior.Prior
 #console.log(c.monoidOp(2, 3))
 #console.log(c.monoidOp(3, 2))
